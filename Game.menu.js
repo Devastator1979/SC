@@ -3,7 +3,7 @@
 // @author Ilovemycomp 2017, Demin 2013, LazyGreg 2008.
 // @description Расширенное выпадающее меню. Убирает сылку на Рулетку и добавляет кучу быстрых сылок в Меню игры.
 // @homepage https://greasyfork.org/ru/scripts/1224-hwm-adv-dd-menu
-// @version 1.2.1
+// @version 1.3.1
 // @include http://*heroeswm.ru/*
 // @include http://178.248.235.15/*
 // @include http://*lordswm.com/*
@@ -23,7 +23,7 @@
         if ( pers_id ) {
     pers_id = /id=(\d+)/.exec( pers_id )[1]; // получаем ID текущего персонажа.
     
-        // ЛИЧНЫЕ ССЫЛКИ. заменяются ссылки в меню: Чата -> "Комната..." максимум 9 шт.
+        // ЛИЧНЫЕ ССЫЛКИ.1 заменяются ссылки в меню: Чата -> "Комната..." максимум 9 шт.
     var replace_chat = false;
         // replace_chat = true; // перенести /*комментарий*/ к этой строке ( // впереди строки ) на 1 строку выше - для вкл замены чата своими ссылками.
     var map_change = document.querySelector("li * a[href='map.php']");
@@ -31,7 +31,7 @@
             // замена "Карта" - на Карта-> Производства.
         // if ( map_change ) { setTimeout(function() { map_change.href = 'map.php?st=sh'; }, 500) }
     
-    var my_links = []; // ЗАМЕНА МЕНЮ ЧАТА
+    var my_links = []; // ЗАМЕНА МЕНЮ ЧАТА1
         // ниже вставить номера ваших ссылок. макс 9 - по числу комнат чата.
         // лучше написать их на английском языке или в "транслите"
         // русские буквы должны быть (не обязательно) преобразованы в коды юникода. https://unicode-table.com/en/tools/decoder
@@ -80,14 +80,14 @@
         var forum_smiths_id = '22';
         var roulet_smiths = '\u0420\u0443\u043B\u0435\u0442\u043A\u0430';
     }
-        var pers_shop = []; // Персонаж - Магазин
+        var pers_shop = []; // Персонаж - Магазин1
     pers_shop.push('<a href="http://fr7927vq.bget.ru/dsdred/arend.htm" target="_blank"> сервис Арендатор </a>');
     pers_shop.push('<hr>');
     pers_shop.push('<a href="/shop.php?cat=ring&rent=1&"> \u0410\u0440\u0435\u043D\u0434\u0430-> \u041A\u043E\u043B\u0435\u0446</a>');
     pers_shop.push('<a href="forum_messages.php?tid=2212549"> ?арты существ наноарты</a>');
     pers_shop.push('<a href="/shop.php?cat=transport"> \u0422\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442</a>');
     
-          var pers_market = []; // Персонаж - Рынок. С таймингом - Выпадающее.
+          var pers_market = []; // Персонаж - Рынок. С таймингом - Выпадающее.1
     pers_market.push('<a href="auction.php?cat=res&sort=0&type=1">&nbsp;&nbsp;' + market_wood + '</a>');
     pers_market.push('<a href="auction.php?cat=res&sort=0&type=2">&nbsp;&nbsp;' + market_ore + '</a>');
     pers_market.push('<a href="auction.php?cat=res&sort=0&type=3">&nbsp;&nbsp;' + market_mercury + '</a>');
